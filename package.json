@@ -1,5 +1,5 @@
 {
-  "name": "d3-path",
+  "name": "@krisdages/d3-path",
   "version": "3.0.1",
   "description": "Serialize Canvas path commands to SVG.",
   "homepage": "https://d3js.org/d3-path/",
@@ -46,8 +46,7 @@
   },
   "scripts": {
     "test": "mocha 'test/**/*-test.js' && eslint src test",
-    "prepublishOnly": "rm -rf dist && yarn test && rollup -c",
-    "postpublish": "git push && git push --tags && cd ../d3.github.com && git pull && cp ../${npm_package_name}/dist/${npm_package_name}.js ${npm_package_name}.v${npm_package_version%%.*}.js && cp ../${npm_package_name}/dist/${npm_package_name}.min.js ${npm_package_name}.v${npm_package_version%%.*}.min.js && git add ${npm_package_name}.v${npm_package_version%%.*}.js ${npm_package_name}.v${npm_package_version%%.*}.min.js && git commit -m \"${npm_package_name} ${npm_package_version}\" && git push && cd -"
+    "prepublishOnly": "rm -rf dist && yarn test && rollup -c"
   },
   "engines": {
     "node": ">=12"
